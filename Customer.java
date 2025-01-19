@@ -2,6 +2,11 @@ public class Customer {
     private String name;
     private int money;
 
+    public Customer(String name, int money) {
+        this.name = name;
+        this.money = money;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -10,11 +15,16 @@ public class Customer {
         this.name = name;
     }
 
-    public String getMoney() {
-        return this.name;
+    public int getMoney() {
+        return this.money;
     }
 
     public void setMoney(int money) {
         this.money = money;
+    }
+
+    @Override
+    public String toString() {
+        return ("Customer "+this.name+" has $"+this.money+".");
     }
 }
