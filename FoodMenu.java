@@ -14,6 +14,15 @@ public class FoodMenu {
         this.menu.add(salad);
     }
 
+    public Food getFood(int index) {
+        try {
+            Food chosenFood = this.menu.get(index-1);
+            return chosenFood;
+        } catch(IndexOutOfBoundsException e) {
+            return null;
+        }
+    }
+
     public static void main(String[] args) {
         FoodMenu foodMenu = new FoodMenu();
         System.out.println(foodMenu);
