@@ -22,6 +22,15 @@ public class Customer {
     public void setMoney(int money) {
         this.money = money;
     }
+    
+    public static void main(String[] args) {
+        // Testing:
+        
+        Customer john = new Customer("John Smith", 100); // instantiates a Customer
+        System.out.println(john.getName()); // test calling name
+        System.out.println(john.getMoney()); // test calling money
+        System.out.println(john); // test overridden toString method
+    }
 
     @Override
     public String toString() {
