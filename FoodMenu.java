@@ -23,6 +23,18 @@ public class FoodMenu {
         }
     }
 
+    public Food getLowestCostFood() {
+        Food lowestFood = null;
+        for (Food menuItem : this.menu) {
+            if (lowestFood == null) {
+                lowestFood = menuItem;
+            } else if (menuItem.getPrice() < lowestFood.getPrice()) {
+                lowestFood = menuItem;
+            }
+        }
+        return lowestFood;
+    }
+
     public static void main(String[] args) {
         FoodMenu foodMenu = new FoodMenu();
         System.out.println(foodMenu);
