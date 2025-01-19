@@ -19,6 +19,6 @@ public class Food implements PricedItem<Integer> {
 
     @Override
     public String toString() {
-        return ("Enjoy "+this.name+": "+this.description+"! \nCost: "+this.price+"!");
+        return (this.name+": "+this.description+", each costs: $"+this.price+"!");
     }
 }
