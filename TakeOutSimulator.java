@@ -12,7 +12,7 @@ public class TakeOutSimulator {
     }
 
     private <T> T getResponse(String userInputPrompt, UserInputRetriever<T> userInputRetriever) {
-        while (true)  {
+        while (true) {
             System.out.println(userInputPrompt);
             if (input.hasNextInt()) {
                 int userInput = input.nextInt();
@@ -27,5 +27,5 @@ public class TakeOutSimulator {
             }
         }
     }
-    
+
 }

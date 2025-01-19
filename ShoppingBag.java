@@ -12,9 +12,9 @@ public class ShoppingBag<T extends PricedItem<Integer>> {
         if (this.shoppingBag.get(item) != null) {
             int pos = this.shoppingBag.get(item);
             pos++;
-            this.shoppingBag.put(item,pos);
+            this.shoppingBag.put(item, pos);
         } else {
-            this.shoppingBag.put(item,1);
+            this.shoppingBag.put(item, 1);
         }
     }
 
@@ -26,12 +26,12 @@ public class ShoppingBag<T extends PricedItem<Integer>> {
         return total;
     }
 
-    @Override 
+    @Override
     public String toString() {
         String itemList = "";
         for (T item : this.shoppingBag.keySet()) {
-            itemList += ("- "+this.shoppingBag.get(item)+"x "+item+"\n");
+            itemList += ("- " + this.shoppingBag.get(item) + "x " + item + "\n");
         }
-        return "Items in Shopping Bag:\n"+itemList+"Total Price: $"+this.getTotalPrice()+".";
+        return "Items in Shopping Bag:\n" + itemList + "Total Price: $" + this.getTotalPrice() + ".";
     }
 }

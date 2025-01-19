@@ -22,10 +22,10 @@ public class Customer {
     public void setMoney(int money) {
         this.money = money;
     }
-    
+
     public static void main(String[] args) {
         // Testing:
-        
+
         Customer john = new Customer("John Smith", 100); // instantiates a Customer
         System.out.println(john.getName()); // test calling name
         System.out.println(john.getMoney()); // test calling money
@@ -34,6 +34,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return ("Customer "+this.name+" has $"+this.money+".");
+        return ("Customer " + this.name + " has $" + this.money + ".");
     }
 }
