@@ -27,9 +27,13 @@ public class Customer {
         // Testing:
 
         Customer john = new Customer("John Smith", 100); // instantiates a Customer
-        System.out.println(john.getName()); // test calling name
-        System.out.println(john.getMoney()); // test calling money
-        System.out.println(john); // test overridden toString method
+        System.out.println("Name: "+john.getName()+" Money: $"+john.getMoney()); // test getting name, and money
+
+        Customer pete = john;
+
+        pete.setName("Pete Smith"); // test setName
+        pete.setMoney(200); // test setMoney
+        System.out.println(pete); // test overridden toString method
     }
 
     @Override

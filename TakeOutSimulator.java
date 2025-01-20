@@ -29,7 +29,7 @@ public class TakeOutSimulator {
     }
 
     public boolean shouldSimulate() {
-        String userPrompt = "Enter 1 to proceed with simulation or Enter 0 to stop simulation.";
+        String userPrompt = "Enter 1 to proceed with simulation or Enter 0 to stop simulation: ";
         UserInputRetriever<Boolean> userInputRetriever = (promptChoice) -> {
             if (promptChoice == 1) {
                 Food lowestPricedFood = menu.getLowestCostFood();
@@ -44,6 +44,20 @@ public class TakeOutSimulator {
                 return false;
             } else {
                 throw new IllegalArgumentException("Invalid Selection: " + promptChoice + ". Please enter 0 or 1.");
+            }
+        };
+
+        return getResponse(userPrompt, userInputRetriever);
+    }
+
+    public Food getMenuSelection() {
+        String userPrompt = "Choose a menu item: ";
+        UserInputRetriever<Food> userInputRetriever = (promptChoice) -> {
+            Food foodItem = menu.getFood(promptChoice);
+            if (foodItem != null) {
+                return foodItem;
+            } else {
+                throw new IllegalArgumentException("Invalid Selection: " + promptChoice + ". Please enter a valid menu item number.");
             }
         };
 
