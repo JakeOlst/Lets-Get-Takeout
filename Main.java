@@ -27,5 +27,6 @@ public class Main {
     TakeOutSimulator takeOutSimulator = new TakeOutSimulator(john,foodMenu,inputScanner);
     System.out.println(takeOutSimulator.shouldSimulate());
     System.out.println(takeOutSimulator.getMenuSelection());
+    System.out.println(takeOutSimulator.isStillOrderingFood());
   }    
 }
