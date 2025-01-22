@@ -25,8 +25,10 @@ public class Main {
     System.out.println(shoppingBag);
 
     TakeOutSimulator takeOutSimulator = new TakeOutSimulator(john,foodMenu,inputScanner);
-    System.out.println(takeOutSimulator.shouldSimulate());
-    System.out.println(takeOutSimulator.getMenuSelection());
-    System.out.println(takeOutSimulator.isStillOrderingFood());
+    // System.out.println(takeOutSimulator.shouldSimulate());
+    // System.out.println(takeOutSimulator.getMenuSelection());
+    // System.out.println(takeOutSimulator.isStillOrderingFood());
+    // takeOutSimulator.checkoutCustomer(shoppingBag);
+    takeOutSimulator.takeOutPrompt();
   }    
 }
