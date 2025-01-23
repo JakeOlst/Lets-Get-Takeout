@@ -3,33 +3,27 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    // test instantiating a food item
-    Food burger = new Food("Cheeseburger", "A medium-rare steak burger with sliced cheddar cheese, tomatoes and pickles", 10);
+
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Hello! Please provide your name: ");
+    String customerName = input.nextLine();
+
+    int money = 0;
     
-    Customer john = new Customer("John", 1000);
+    while (true) {
+      try {
+        System.out.print("Please enter your starting money: $");
+        money = input.nextInt();
+        break;
+      } catch (InputMismatchException e) {
+        System.out.println("Invalid integer input: '"+e+"'. Please try again.");
+        input.nextLine();
+      }
+    }
 
-    FoodMenu foodMenu = new FoodMenu();
-
-    Scanner inputScanner = new Scanner(System.in);
-    // print out Food and Customer objects using toString overridden method
-    //System.out.println(john);
-    //System.out.println(burger);
-
-    // creates a Shop
-    ShoppingBag shoppingBag = new ShoppingBag();
-
-    shoppingBag.addItem(burger);
-    shoppingBag.addItem(burger);
-    shoppingBag.addItem(burger);
-
-    System.out.println(shoppingBag);
-
-    TakeOutSimulator takeOutSimulator = new TakeOutSimulator(john,foodMenu,inputScanner);
-    // System.out.println(takeOutSimulator.shouldSimulate());
-    // System.out.println(takeOutSimulator.getMenuSelection());
-    // System.out.println(takeOutSimulator.isStillOrderingFood());
-    // takeOutSimulator.checkoutCustomer(shoppingBag);
-    // takeOutSimulator.takeOutPrompt();
-     takeOutSimulator.startTakeOutSimulator();
+    Customer customer = new Customer(customerName, money);
+    TakeOutSimulator takeOutSimulator = new TakeOutSimulator(customer, input);
+    takeOutSimulator.startTakeOutSimulator();
   }    
 }

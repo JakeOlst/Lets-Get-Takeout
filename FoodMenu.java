@@ -14,6 +14,10 @@ public class FoodMenu {
         this.menu.add(salad);
     }
 
+    public FoodMenu(List<Food> menu) {
+        this.menu = menu;
+    }
+
     public Food getFood(int index) {
         try {
             Food chosenFood = this.menu.get(index-1);

@@ -5,9 +5,9 @@ public class TakeOutSimulator {
     private FoodMenu menu;
     private Scanner input;
 
-    public TakeOutSimulator(Customer customer, FoodMenu menu, Scanner input) {
+    public TakeOutSimulator(Customer customer, Scanner input) {
         this.customer = customer;
-        this.menu = menu;
+        this.menu = new FoodMenu();
         this.input = input;
     }
 

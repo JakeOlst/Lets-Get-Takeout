@@ -48,6 +48,8 @@ public class Food implements PricedItem<Integer> {
         System.out.println(ultimateBurger); // test overridden toString method 
     }
 
+    
+
     @Override
     public String toString() {
         return (this.name+": "+this.description+". Price: $"+this.price+"!");
