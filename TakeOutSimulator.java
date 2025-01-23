@@ -109,4 +109,13 @@ public class TakeOutSimulator {
         }
     }
 
+    public void startTakeOutSimulator() {
+        System.out.println("Welcome to my restaurant!");
+        while (shouldSimulate()) {
+            System.out.println("Welcome, "+this.customer.getName());
+            takeOutPrompt();
+        }
+        System.out.println("Thank you for visiting!");
+    }
+
 }

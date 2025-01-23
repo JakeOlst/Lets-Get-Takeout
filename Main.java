@@ -29,6 +29,7 @@ public class Main {
     // System.out.println(takeOutSimulator.getMenuSelection());
     // System.out.println(takeOutSimulator.isStillOrderingFood());
     // takeOutSimulator.checkoutCustomer(shoppingBag);
-    takeOutSimulator.takeOutPrompt();
+    // takeOutSimulator.takeOutPrompt();
+     takeOutSimulator.startTakeOutSimulator();
   }    
 }
